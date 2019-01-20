@@ -1,12 +1,12 @@
 //Setting routes
 const fs = require('fs');
 
-module.exports = function(app, io) {  
-	
+module.exports = function(app, io) {
+
 	app.get('/', function (req, res) {
 		res.send('MerryHome server welcoms;p');
 	});
-	
+
         //Search and load all plugins
 	var pluginsFolder=__dirname+"/../plugins";
         var pluginsForMenu = [];
@@ -28,13 +28,14 @@ module.exports = function(app, io) {
                     }
                 }
             });
+            //pluginsForMenu.push("football");
 	});
-        
+
 	//Url for getting a list of plugin view
-	app.get('/api/plugins', function (req, res) {
-		res.end(JSON.stringify(pluginsForMenu));
-	});
-        
+       	app.get('/api/plugins', function (req, res) {
+       		res.end(JSON.stringify(pluginsForMenu));
+       	});
+
         //Url for getting all plugins expressions
         app.get('/api/expressions', function (req, res) {
             var allExpression= {};
@@ -47,7 +48,7 @@ module.exports = function(app, io) {
             }
             res.send(JSON.stringify(allExpression));
 	});
-	
+
         //Url for getting all plugins configs
         app.get('/api/configs', function (req, res) {
             var allConfigs= {};
@@ -60,7 +61,7 @@ module.exports = function(app, io) {
             }
             res.send(JSON.stringify(allConfigs));
         });
-	
+
         //config actions google assistant
 	var {dialogflow} = require('actions-on-google');
 	var assistant = dialogflow();

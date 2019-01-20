@@ -7,6 +7,7 @@ class WikipediaController {
     }
     
     postAction(req, res){
+    console.log("param :"+req.params.actionId)
         switch(req.params.actionId){
             case "whois":
             case "whatis":
