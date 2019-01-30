@@ -1,0 +1,5 @@
+{ 
+    "today": 	"programme d'(?P<searchValue>.+\\s?.*\\s?.*)",
+    "tomorrow": "programme de (?P<searchValue>.+\\s?.*\\s?.*)",
+    "ligue": 	"la (?P<searchValue>.+\\s?.*\\s?.*)"
+}

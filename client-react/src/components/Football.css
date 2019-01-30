@@ -1,0 +1,30 @@
+.plugin-football .result{
+    margin: 20px auto;
+    display: inline-block;
+    text-align: left;
+}
+
+
+.plugin-football .result table > p, .plugin-football .result table > div {
+    display: block;
+}
+
+.plugin-football .shortResult{
+    margin: 10px 80px;
+    display: inline-block;
+    text-align: left;
+}
+
+.plugin-football .shortResult::before {
+    content: open-quote;
+}
+.plugin-football .shortResult::after {
+    content: close-quote;
+}
+
+
+.thumb.tright {
+    float: right;
+    clear: right;
+    width: auto;
+}
